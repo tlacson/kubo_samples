@@ -1,12 +1,102 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Kubo Samples </title>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 300px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 300px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
 </head>
-
 <body>
-<h1> This is a test web page for Kubo in Vercel </h1>
 
-<h3> Sample files:</h3>
-<a href="socialmediatemplate1.html"> Social Media Template 1</a>
+<header>
+  <h2>Kubo</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="socialmediatemplate1.html"> Social Media Template 1</a></li>
+      <br>
+      <li><a href="NCND/Business-Non-Compete-Agreement6.pdf"> NCND Sample 1</a></li>
+      <li><a href="NCND/Non-Disclosure-Agreement-Template.pdf"> Non Disclosure Sample 1</a></li>
+      <li><a href="NCND/washington-non-compete-agreement-template.pdf"> Non Compete Sample 1</a></li>
+    </ul>
+  </nav>
+  
+  <article>
+    <h1>Kubo Origins</h1>
+    <p>Kubo was conceived by Ines and Tony Lacson in the latter part of September 2023.</p>
+    <p>Kubo is intended to be a holistic workspace for Loan Originators, Brokers, Lenders and third-party organizations.</p>
+  </article>
+</section>
+
+<footer>
+  <p>Registered @2023 Sophia's Smelly Feet Holdings</p>
+</footer>
+
 </body>
 </html>
+
